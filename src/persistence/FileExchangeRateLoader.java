@@ -16,7 +16,13 @@ public class FileExchangeRateLoader implements ExchangeRateLoader{
      
     private FileExchangeRateLoader(){
     }
-     
+    
+    public static FileExchangeRateLoader getInstance() {
+        if (instance == null)
+            instance = new FileExchangeRateLoader();
+        return instance;
+    }
+    
     public static ArrayList<String> load(String filename){
         ArrayList<String> list=new ArrayList<>();
         try {

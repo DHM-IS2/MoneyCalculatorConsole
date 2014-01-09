@@ -24,6 +24,7 @@ public class FileCurrencySetLoader implements CurrencySetLoader {
         this.filename = filename;
     }
     
+    @Override
     public void load(){
         try {
             BufferedReader reader=new BufferedReader(new FileReader(new File(filename)));
